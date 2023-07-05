@@ -8,25 +8,25 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.tikkel.ui.home.HomeFragment"
-        android:label="@string/title_home_k"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_withdraw"
         android:name="com.example.tikkel.ui.withdraw.WithdrawFragment"
-        android:label="@string/title_withdraw_k"
+        android:label = "@string/app_name"
         tools:layout="@layout/fragment_withdraw" />
 
     <fragment
         android:id="@+id/navigation_display"
         android:name="com.example.tikkel.ui.display.DisplayFragment"
-        android:label="@string/title_display_k"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_display" />
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.tikkel.ui.setting.SettingFragment"
-        android:label="@string/title_settings_k"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_setting" />
 
 
