@@ -45,7 +45,7 @@ class SplashActivity : AppCompatActivity() {
 
             UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
                 if (error != null) {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, SignUpActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else if (tokenInfo != null) {

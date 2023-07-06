@@ -26,6 +26,9 @@ class HomeFragment : Fragment() {
     private lateinit var dialog:AlertDialog
     private lateinit var btnMin: Button
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,8 +45,6 @@ class HomeFragment : Fragment() {
         if(isServiceRunning()){
             requireActivity().stopService(Intent(requireActivity(), FloatingWindowApp::class.java))
             requireActivity().finish()
-        }else{
-            requestPermission()
         }
 
         val textView: TextView = binding.textHome
@@ -52,10 +53,17 @@ class HomeFragment : Fragment() {
         }
 
         btnMin.setOnClickListener {
-            if(CheckOverlayPermission()){
-                requireActivity().startService(Intent(requireActivity(), FloatingWindowApp::class.java))
-                requireActivity().finish()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (!Settings.canDrawOverlays(context)) {
+                    requestPermission()
+                }else{
+                    if(CheckOverlayPermission()){
+                        requireActivity().startService(Intent(requireActivity(), FloatingWindowApp::class.java))
+                        requireActivity().finish()
+                    }
+                }
             }
+
         }
 
         /*
