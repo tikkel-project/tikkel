@@ -6,26 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="200dp"
-        android:textSize="30sp"
+
+    <FrameLayout
+        android:id="@+id/Min_Button_bg"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:background="@drawable/home_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        >
+        <ImageButton
+            android:id="@+id/Min_Button"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_gravity="center"
+            android:background="@drawable/home_bg"
+            android:src="@drawable/ic_baseline_ads_click_24"
+             />
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/Min_Button"
-        android:layout_width="200dp"
+
+
+
+
+    <ImageButton
+        android:id="@+id/nextScore"
+        android:layout_width="24dp"
+        android:layout_height="40dp"
+        android:background="@drawable/home_bg"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/Min_Button_bg"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/Min_Button_bg" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:text="Minimize"
-        android:background="@drawable/background_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="5dp"
+        android:text="내 정보"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nextScore"
+        app:layout_constraintStart_toEndOf="@+id/nextScore" />
+
+    <ImageView
+        android:id="@+id/money_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_baseline_copyright_24"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Min_Button_bg"
+        app:layout_constraintStart_toStartOf="@+id/Min_Button_bg" />
+
+    <TextView
+        android:id="@+id/money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="100P"
+        android:textColor="@color/black"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/money_img"
+        app:layout_constraintStart_toEndOf="@+id/money_img" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

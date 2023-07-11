@@ -60,10 +60,7 @@ dependencies {
 
     //정용 58줄
     implementation 'com.kakao.sdk:v2-user:2.14.0'
-
-
-
-
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 

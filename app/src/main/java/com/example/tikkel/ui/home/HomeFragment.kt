@@ -14,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.tikkel.databinding.FragmentHomeBinding
@@ -24,7 +25,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var dialog:AlertDialog
-    private lateinit var btnMin: Button
+    private lateinit var btnMin: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +48,9 @@ class HomeFragment : Fragment() {
             requireActivity().finish()
         }
 
-        val textView: TextView = binding.textHome
+        //val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+         //   textView.text = it
         }
 
         btnMin.setOnClickListener {
@@ -64,6 +65,14 @@ class HomeFragment : Fragment() {
                 }
             }
 
+        }
+        binding.nextScore.setOnClickListener {
+            val dlg= CustomScore()
+            dlg.show(requireActivity().supportFragmentManager,"CustomScore")
+        }
+        binding.textView.setOnClickListener {
+            val dlg= CustomScore()
+            dlg.show(requireActivity().supportFragmentManager,"CustomScore")
         }
 
         /*
