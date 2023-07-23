@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +18,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
+import com.example.tikkel.R
 import com.example.tikkel.databinding.FragmentHomeBinding
+import kotlin.concurrent.thread
+import com.example.tikkel.MainActivity
 
 
 class HomeFragment : Fragment() {
@@ -27,8 +31,13 @@ class HomeFragment : Fragment() {
     private lateinit var dialog:AlertDialog
     private lateinit var btnMin: ImageButton
 
+    /*override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("#########################","HomeFragment onCreate")
     }
 
     override fun onCreateView(
@@ -36,6 +45,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d("#########################","HomeFragment onCreateView")
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -43,14 +53,16 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         btnMin = binding.MinButton
-        if(isServiceRunning()){
-            requireActivity().stopService(Intent(requireActivity(), FloatingWindowApp::class.java))
-            requireActivity().finish()
-        }
 
         //val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
          //   textView.text = it
+        }
+        if(!isServiceRunning()){
+            binding.textOnOff.text="ON"
+        }
+        else{
+            binding.textOnOff.text="OFF"
         }
 
         btnMin.setOnClickListener {
@@ -59,8 +71,17 @@ class HomeFragment : Fragment() {
                     requestPermission()
                 }else{
                     if(CheckOverlayPermission()){
-                        requireActivity().startService(Intent(requireActivity(), FloatingWindowApp::class.java))
-                        requireActivity().finish()
+                        if(!isServiceRunning()){
+                            requireActivity().startForegroundService(Intent(requireActivity(), FloatingWindowApp::class.java))
+                            binding.textOnOff.text = "OFF"
+
+                        }
+                        else{
+                            //서비스에 안전 종료 메시지 보내기
+
+                            requireActivity().stopService(Intent(requireActivity(), FloatingWindowApp::class.java))
+                            binding.textOnOff.text = "ON"
+                        }
                     }
                 }
             }
@@ -80,6 +101,17 @@ class HomeFragment : Fragment() {
         checkAndroidVersion()
          */
         return root
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("#########################","HomeFragment onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("#########################","HomeFragment onStop")
     }
 
     private fun isServiceRunning(): Boolean {
@@ -117,6 +149,7 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        Log.d("#########################","HomeFragment onDestroyView")
         _binding = null
     }
 }

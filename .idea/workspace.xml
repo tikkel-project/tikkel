@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb51fd11-924f-4383-8f15-bb19499d2b28" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$USER_HOME$/.vscode/extensions/mathiasfrohlich.kotlin-1.7.1/.idea/vscode-kotlin.iml" afterDir="false" />
       <change afterPath="$USER_HOME$/.vscode/extensions/styled-components.vscode-styled-components-1.7.8/node_modules/tunnel/.idea/node-tunnel.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/CustomScore.kt" afterDir="false" />
@@ -29,10 +30,13 @@
       <change beforePath="$PROJECT_DIR$/../../hk2/gpt_h/office_gpt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../m_t/MoAppTeam4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeViewModel.kt" afterDir="false" />
@@ -1392,13 +1396,17 @@
       <change beforePath="$PROJECT_DIR$/../../test/hello.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../you/hello.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../you/hello2.py" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/FloatingWindowApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/FloatingWindowApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tikkel/ui/home/HomeFragment.kt" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/bagjeong-yong/.android/avd/Pixel_2_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\spaceprince\.android\avd\for_testing_practice_tikkel.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -1464,6 +1472,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="cidr.known.project.marker" value="true" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
@@ -1472,6 +1481,13 @@
   </component>
   <component name="PsdUISettings">
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice_tikkel" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+>>>>>>> Stashed changes
   </component>
   <component name="RecentsManager">
     <key name="android.template.-187374015">

@@ -27,8 +27,20 @@
              />
     </FrameLayout>
 
+s
 
-
+    <TextView
+        android:id="@+id/text_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/home_button_on_off"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Min_Button_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Min_Button_bg" />
 
 
     <ImageButton
@@ -40,6 +52,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/Min_Button_bg"
         android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="@+id/Min_Button_bg" />
+
+
 
     <TextView
         android:id="@+id/textView"

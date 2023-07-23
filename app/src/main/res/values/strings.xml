@@ -4,6 +4,11 @@
     <string name="title_withdraw_k">출금</string>
     <string name="title_display_k">화면</string>
     <string name="title_settings_k">설정</string>
+    <string name="home_button_on_off">ON</string>
+    <string name="service_on_off">OFF</string>
+    <string name="display_mode_banner">배너형 화면</string>
+    <string name="display_mode_window">창모드 화면</string>
+    <string name="display_background_mode">배경화면 선정</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
